@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <main
-      className={`min-h-screen transition-colors duration-300 relative ${isDark ? "bg-neutral-950 text-neutral-100" : "bg-white text-neutral-900"
+      className={`min-h-screen overflow-x-hidden transition-colors duration-300 relative ${isDark ? "bg-neutral-950 text-neutral-100" : "bg-white text-neutral-900"
         }`}
     >
       <IntroLoader />

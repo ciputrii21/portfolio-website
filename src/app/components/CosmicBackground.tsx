@@ -19,12 +19,12 @@ export default function CosmicBackground({ isDark }: { isDark: boolean }) {
 
             {/* Radial glow center, less blur so color reads stronger */}
             <div
-                className={`absolute left-1/2 top-0 -translate-x-1/2 w-[800px] h-[800px] rounded-full blur-2xl ${isDark ? "opacity-60" : "opacity-15"
+                className={`absolute left-1/2 top-0 -translate-x-1/2 w-[380px] h-[380px] sm:w-[800px] sm:h-[800px] rounded-full blur-2xl ${isDark ? "opacity-60" : "opacity-15"
                     }`}
                 style={{ background: "radial-gradient(circle, #8b5cf6 0%, transparent 60%)" }}
             />
             <div
-                className={`absolute left-1/2 top-16 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-2xl ${isDark ? "opacity-50" : "opacity-15"
+                className={`absolute left-1/2 top-16 -translate-x-1/2 w-[280px] h-[280px] sm:w-[600px] sm:h-[600px] rounded-full blur-2xl ${isDark ? "opacity-50" : "opacity-15"
                     }`}
                 style={{ background: "radial-gradient(circle, #22d3ee 0%, transparent 60%)" }}
             />

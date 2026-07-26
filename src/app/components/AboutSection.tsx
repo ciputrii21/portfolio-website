@@ -38,11 +38,10 @@ function CardShell({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.4 }}
-      className={`h-full flex flex-col rounded-2xl border p-7 backdrop-blur-xl transition-all duration-300 ${
-        isDark
+      className={`h-full flex flex-col rounded-2xl border p-7 backdrop-blur-xl transition-all duration-300 ${isDark
           ? "bg-white/[0.03] border-white/10 hover:border-violet-400/50 hover:shadow-[0_0_25px_rgba(139,92,246,0.15)]"
           : "bg-black/[0.02] border-black/10 hover:border-violet-400/50"
-      } ${className}`}
+        } ${className}`}
     >
       <div className="flex flex-col items-center text-center gap-2 mb-4">
         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500/20 to-cyan-400/20 flex items-center justify-center text-violet-400 shrink-0">
@@ -142,7 +141,7 @@ export default function AboutSection({ lang, isDark }: { lang: Lang; isDark: boo
       <h2 className="text-3xl sm:text-4xl font-bold mb-3">{t.aboutTitle}</h2>
       <p className={`mb-12 max-w-xl mx-auto ${mutedText}`}>{t.aboutSubtitle}</p>
 
-      <div className="grid sm:grid-cols-2 gap-5 text-left">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left">
         {/* Bacaan Saya */}
         <CardShell title={t.readsTitle} icon={Sparkles} isDark={isDark}>
           <div className="flex gap-4 items-center">
@@ -184,13 +183,12 @@ export default function AboutSection({ lang, isDark }: { lang: Lang; isDark: boo
               <button
                 key={h.id}
                 onClick={() => setHobbyIndex(i)}
-                className={`text-xs px-2.5 py-1 rounded-full flex items-center gap-1 transition-colors ${
-                  i === hobbyIndex
+                className={`text-xs px-2.5 py-1 rounded-full flex items-center gap-1 transition-colors ${i === hobbyIndex
                     ? "bg-violet-500/20 text-violet-300 border border-violet-400/40"
                     : isDark
-                    ? "bg-white/5 text-neutral-300"
-                    : "bg-black/5 text-neutral-600"
-                }`}
+                      ? "bg-white/5 text-neutral-300"
+                      : "bg-black/5 text-neutral-600"
+                  }`}
               >
                 <span>{h.emoji}</span> {lang === "id" ? h.id : h.en}
               </button>
